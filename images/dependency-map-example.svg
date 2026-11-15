@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 392" font-family="Segoe UI, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#52636C"/></marker>
+  </defs>
+  <rect width="920" height="392" fill="#ffffff"/>
+  <g fill="#52636C" font-weight="600" font-size="10.5">
+    <text x="10" y="20">ACTIVITY</text><text x="164" y="20">ACCOUNT</text><text x="318" y="20">DEVICE</text>
+    <text x="472" y="20">SECOND FACTOR</text><text x="626" y="20">RECOVERY ROUTE</text><text x="780" y="20">DATA / BACKUP</text>
+  </g>
+  <g stroke="#52636C" stroke-width="1.4" marker-end="url(#a)" fill="none">
+    <path d="M138 66H162"/><path d="M292 66H316"/><path d="M446 66H470"/><path d="M600 66H624"/><path d="M754 66H778"/>
+    <path d="M138 146H162"/><path d="M292 146H316"/><path d="M446 146H470"/><path d="M600 146H624"/><path d="M754 146H778"/>
+    <path d="M138 226H162"/><path d="M292 226H316"/><path d="M446 226H470"/><path d="M600 226H624"/><path d="M754 226H778"/>
+  </g>
+  <g fill="#E7EFF2" stroke="#146C75" stroke-width="1.3">
+    <rect x="10" y="40" width="128" height="52" rx="6"/><rect x="164" y="40" width="128" height="52" rx="6"/>
+    <rect x="780" y="40" width="128" height="52" rx="6"/>
+    <rect x="10" y="120" width="128" height="52" rx="6"/><rect x="164" y="120" width="128" height="52" rx="6"/>
+    <rect x="318" y="120" width="128" height="52" rx="6"/><rect x="780" y="120" width="128" height="52" rx="6"/>
+    <rect x="10" y="200" width="128" height="52" rx="6"/><rect x="164" y="200" width="128" height="52" rx="6"/>
+    <rect x="318" y="200" width="128" height="52" rx="6"/><rect x="472" y="200" width="128" height="52" rx="6"/>
+    <rect x="780" y="200" width="128" height="52" rx="6"/>
+  </g>
+  <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1.6">
+    <rect x="318" y="40" width="128" height="52" rx="6"/><rect x="472" y="40" width="128" height="52" rx="6"/>
+    <rect x="626" y="40" width="128" height="52" rx="6"/>
+    <rect x="472" y="120" width="128" height="52" rx="6"/><rect x="626" y="120" width="128" height="52" rx="6"/>
+    <rect x="626" y="200" width="128" height="52" rx="6"/>
+  </g>
+  <g fill="#19394B" text-anchor="middle">
+    <text x="74" y="62">Pay bills</text>
+    <text x="228" y="62">Bank account</text>
+    <text x="382" y="62">Main phone</text>
+    <text x="536" y="58">Authenticator app</text><text x="536" y="74">on the main phone</text>
+    <text x="690" y="58">Text message to</text><text x="690" y="74">the phone number</text>
+    <text x="844" y="62">Bank keeps records</text>
+
+    <text x="74" y="142">Work on Project A</text>
+    <text x="228" y="142">Hosting account</text>
+    <text x="382" y="142">Laptop</text>
+    <text x="536" y="138">Authenticator app</text><text x="536" y="154">on the main phone</text>
+    <text x="690" y="134">Primary email, reset</text><text x="690" y="150">by text to the</text><text x="690" y="164">phone number</text>
+    <text x="844" y="138">Files on laptop and</text><text x="844" y="154">backup drive</text>
+
+    <text x="74" y="222">Look at family photos</text>
+    <text x="228" y="222">Cloud photos account</text>
+    <text x="382" y="222">Laptop</text>
+    <text x="536" y="226">Password only</text>
+    <text x="690" y="214">Primary email, reset</text><text x="690" y="230">by text to the</text><text x="690" y="244">phone number</text>
+    <text x="844" y="218">Photos on laptop and</text><text x="844" y="234">drive copy</text>
+  </g>
+  <rect x="10" y="276" width="898" height="104" rx="8" fill="#F4F7F8" stroke="#D7E0E3"/>
+  <rect x="22" y="290" width="16" height="12" rx="3" fill="#FDE8E4" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="46" y="300" fill="#19394B">Red: depends on the main phone or its number. Plain boxes: independent.</text>
+  <g fill="#19394B">
+    <text x="22" y="324" font-weight="600">What the map shows</text>
+    <text x="22" y="342">Losing the main phone or its number breaks all three chains at once: the bank sign-in, the second factor for hosting, and the</text>
+    <text x="22" y="358">email reset behind both. That shared point is the single point of failure to fix first.</text>
+    <text x="22" y="376">Fixes: recovery codes on the emergency card, a second trusted device already signed in, and a carrier-account PIN.</text>
+  </g>
+</svg>
