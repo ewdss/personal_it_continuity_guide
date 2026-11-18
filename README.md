@@ -30,7 +30,7 @@ Changes are described in the commit messages.
 
 ## AI agent instructions
 
-To be done. If you want to go through this guide with your personal AI agent, instructions will be added later.
+If you want to go through this guide with your personal AI agent, provide the agent with the [AGENT-INSTRUCIONS.md](AGENT-INSTRUCTIONS.MD) link.
 
 ## License
 
