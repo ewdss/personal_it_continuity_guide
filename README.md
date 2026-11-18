@@ -23,8 +23,8 @@ Both contain the same text.
 
 | Format | File | Use it for |
 |---|---|---|
-| PDF | [personal guidance.pdf](personal%20guidance.pdf) | Reading and printing. All images are inside the file. |
-| Markdown | [personal guidance.md](personal%20guidance.md) | Reading on GitHub, copying, or processing. Images are linked from the [images](images) folder next to it, so keep the folder together with the file. |
+| Download PDF | [personal guidance.pdf](personal%20guidance.pdf?raw=true) | Reading and printing. All images are inside the file. |
+| Open Markdown | [personal guidance.md](personal%20guidance.md) | Reading on GitHub, copying, or processing. Images are linked from the [images](images) folder next to it, so keep the folder together with the file. |
 
 Changes are described in the commit messages.
 
