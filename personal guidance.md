@@ -1,6 +1,6 @@
 # Practical security and recovery guidance
 
-Revision 0.25
+Revision 0.27
 
 ## 1. Description and purposes
 
@@ -130,7 +130,7 @@ A deliberately short list of what is critical or used most, so you know what to 
 - [ ] **1.1.6 — Keep a copy you can open without your main device.** A printout or a copy on a second device; update it after important changes.
 
 - **Why:** You cannot protect or recover what you have forgotten. The marked entries also set the order of everything else in this level: which account to protect first and which data to back up first.
-- **Tools and examples:** A private note, spreadsheet, or table; roughly one page is the right size. If the list grows past that, stop and leave the rest for section 2.1. A stolen banking login can expose money; hacked email may reset other accounts; replaceable downloads usually matter less than family photos. A changing server environment can be one line: provider, account, console link. Never put passwords, keys, or recovery codes in the list. The inventory companion (separate companion document) offers more structure for later.
+- **Tools and examples:** A private note, spreadsheet, or table; roughly one page is the right size. If the list grows past that, stop and leave the rest for section 2.1. A stolen banking login can expose money; hacked email may reset other accounts; replaceable downloads usually matter less than family photos. A changing server environment can be one line: provider, account, console link. Never put passwords, keys, or recovery codes in the list.
 - **AI help:** Ask an assistant for a table template, or for categories people commonly forget, then fill it in yourself. It cannot know what you actually use. Share service names only if you are comfortable with that; never secrets.
 - **Good result:** A short list of what you depend on and how to find it, with the most important entries marked and a copy within reach.
 - **Check:** Pick an ordinary activity, such as paying a bill or opening project files, and find its device, service, and data location in the list. Follow one link to confirm it reaches the right page. Open the copy without your main device.
@@ -188,14 +188,14 @@ A password manager gives every account its own strong password and remembers it 
 Primary accounts can reset or unlock others: your main email, your phone number's carrier account, your password manager, and the account behind your phone or computer (an Apple, Google, or Microsoft account). Do the steps for one account, then the next.
 
 - [ ] **1.4.1 — Give each primary account a unique password.** Generate and save it with the manager.
-- [ ] **1.4.2 — Turn on MFA for each primary account where supported.** Use an authenticator app or key where the provider offers one.
-- [ ] **1.4.3 — Save recovery codes outside the phone and outside the account itself, during setup.** Print them or keep them on a second device; do not leave them only in the account.
+- [ ] **1.4.2 — Turn on MFA for each primary account where supported.** Use an authenticator app or key where the provider offers one; for a messenger, use the app's own two-step verification passcode.
+- [ ] **1.4.3 — Where the provider offers recovery codes, save them outside the phone and outside the account itself, during setup.** Print them or keep them on a second device; do not leave them only in the account.
 - [ ] **1.4.4 — Confirm that recovery addresses and phone numbers still work.** Remove ones you no longer control.
 - [ ] **1.4.5 — Sketch the four recovery chains from the table below and mark any loop.** One row per chain; mark any row where recovery depends on something it also unlocks.
 - [ ] **1.4.6 — Name, for each chain, a recovery route that does not need your main phone.** Section 4.1 tests it live.
 
 - **Why:** Whoever controls these accounts can reset passwords elsewhere and read the confirmations. They are the first target and the first thing you need back. A chain is “loop-free” when you can regain each one without needing something that is itself locked.
-- **Tools and examples:** Use the provider's official security page, the manager's generator, and a supported authenticator app, passkey, or security key. Fill in one row per chain; the columns show what to look for.
+- **Tools and examples:** Use the provider's official security page, the manager's generator, and a supported authenticator app, passkey, or security key. Messengers that sign you in by phone number work differently: their additional factor is usually not an authenticator app or a key file but the app's own setting, and the details differ by app. For example, WhatsApp's two-step verification asks for a PIN or password when the number is registered again; Signal's PIN blocks re-registration only when Registration Lock is also turned on; Telegram offers a two-step verification password and also supports passkeys for signing in. Check the app's current sign-in and recovery options on its official help pages, turn the setting on while your current session stays open, and save the passcode in your manager. Fill in one row per chain; the columns show what to look for.
 
   | Chain | Usually recovered through | Typical loop | Independent route to prepare |
   |---|---|---|---|
@@ -207,7 +207,7 @@ Primary accounts can reset or unlock others: your main email, your phone number'
   Worked example: Alex's email recovers through a text message to Alex's phone number. The carrier login recovers through an email to that same address. The manager's authenticator codes are on the phone. If the phone is lost, each chain waits on another, and nothing can be regained. Alex adds a saved email recovery code on the emergency card, a carrier-account PIN, and a second device already signed in to the manager. Now each chain has a route that does not touch the lost phone.
 - **AI help:** Paste only the table headings and your own plain-words notes (for example, “my email recovers by text to my phone”) and ask where a loop could hide. Ask what a provider's recovery option means. Open the provider's security page by typing the official address yourself, not through a link from an assistant or a message. Never share codes.
 - **Good result:** Each primary account has a unique saved password, an additional sign-in factor, and a recovery path you can use. A completed table shows no unmarked loop. Passwords and recovery codes stay in their protected places; the inventory holds only references to where.
-- **Check:** While staying signed in, start a new sign-in in a private browser window with the saved password and factor. Send a recovery test message, where the provider offers one, and confirm it reaches a destination you control and can open without the main phone. For each table row, you can state a route that does not need your main phone, or the gap is marked.
+- **Check:** While staying signed in, start a new sign-in in a private browser window with the saved password and factor. For a messenger registered to your phone, use the app's own safe check instead, such as its reminder to re-enter the PIN or password, and never re-register the number as a test. Send a recovery test message, where the provider offers one, and confirm it reaches a destination you control and can open without the main phone. For each table row, you can state a route that does not need your main phone, or the gap is marked.
 - **If skipped:** A reused password can hand over the account that resets all the others. An outdated or circular recovery route can keep you out of your own account.
 
 #### 1.5 Make and test a first backup
@@ -219,14 +219,14 @@ A first backup should be simple. Choose one thing to protect and prove that you 
 - [ ] **1.5.3 — Restore one file to a new folder without using the original.** Use the backup's restore or copy function, never the original file location.
 - [ ] **1.5.4 — Check the restored file's content.** Open the restored file and confirm it reads and looks as expected.
 - [ ] **1.5.5 — Check its date or version.** Make sure it is the version you meant to restore, not an old or partial copy.
-- [ ] **1.5.6 — Make a note of the restore-test result.** Date, what you restored, result, next action; no secrets.
+- [ ] **1.5.6 — Note the restore-test result in the backup coverage worksheet.** One line: date, what you restored, result, next action; no secrets.
 - [ ] **1.5.7 — Add a backup refresh to your calendar as a recurring event.** Monthly is a reasonable starting point.
 
 - **Why:** A device can fail, be lost, or have files deleted or corrupted, and synchronization can spread that damage to every copy. A separate backup is the way back, and only a restore shows that it works.
-- **Tools and examples:** The simplest start is an external drive and a plain copy; a backup service that keeps versions is a good alternative. Download cloud-only files before copying so you do not back up empty placeholders. Restore into a new folder, never over a working file. Refresh monthly and after important changes; sooner if a month of lost work is unacceptable. If your inventory or password vault lives in the cloud, also keep an export of the inventory you can open independently; for the vault, see your manager's supported encrypted export and what is needed to open it. Do not leave an unencrypted password export behind. Account recovery instructions restore access; they are not a backup of the vault's entries. Level 3 adds automation and older versions.
+- **Tools and examples:** The simplest start is an external drive and a plain copy; a backup service that keeps versions is a good alternative. Download cloud-only files before copying so you do not back up empty placeholders. Restore into a new folder, never over a working file. Keep the copy apart: a drive that stays plugged in, or a synced folder, can be deleted or encrypted together with the original by a mistake, ransomware, or someone who takes over your account. Later levels build on this rule rather than repeating it: section 6.4 checks it against an account takeover, and section 9.2 adds an off-site copy. Refresh monthly and after important changes; sooner if a month of lost work is unacceptable. If your inventory or password vault lives in the cloud, also keep an export of the inventory you can open independently; for the vault, see your manager's supported encrypted export and what is needed to open it. Do not leave an unencrypted password export behind. Account recovery instructions restore access; they are not a backup of the vault's entries. Level 3 adds automation and older versions.
 - **AI help:** Ask an assistant for step-by-step instructions for your drive or backup tool, or a simple note template. An assistant cannot confirm that your backup works; only your restore test can.
 - **Good result:** A known backup, with a note of what it covers, where it is, its date, how it is kept apart, and one piece of evidence that a restore works.
-- **Check:** The restored file opens from its new folder and has the expected content and version. The backup is not reachable for deletion from everyday use; verify by looking, not by deleting anything. The test is in your log.
+- **Check:** The restored file opens from its new folder and has the expected content and version. The backup is not reachable for deletion from everyday use; verify by looking, not by deleting anything. The test is noted in the backup coverage worksheet.
 - **If skipped:** Device loss, corruption, or a deletion that spreads through sync may leave no usable copy. An untested backup may fail when needed or hold an unexpectedly old version.
 
 ### Level 2 — A tidy, better-protected everyday setup
@@ -244,7 +244,7 @@ The Level 1 list came from memory. Now use evidence to find what memory missed. 
 - [ ] **2.1.5 — Move the list to a more structured tool if it has outgrown a note.** Optional.
 
 - **Why:** Forgotten accounts keep old passwords and old recovery details, and nobody watches them. Recording the way back in turns the list into something you can use during a recovery.
-- **Tools and examples:** Search your mailbox for welcome messages, receipts, “confirm your email”, password-reset notices, and subscription renewals. Look at the app list on your phone. A spreadsheet or Grist table with columns for purpose, link, priority, recovery route, and secret-storage reference is enough. The inventory companion (separate companion document) covers projects, changing virtual machines, and automation for those who need them.
+- **Tools and examples:** Search your mailbox for welcome messages, receipts, “confirm your email”, password-reset notices, and subscription renewals. Look at the app list on your phone. A spreadsheet or Grist table with columns for purpose, link, priority, recovery route, and secret-storage reference is enough.
 - **AI help:** Two prompts, using names and structure only.
   - *Find them:* “I want to find online accounts I may have forgotten. Give me 15 search queries for my email inbox (welcome messages, receipts, ‘confirm your email’, ‘your account has been created’, password-reset notices, subscription renewals). Add the same for my phone's app list and my bank and card statements. I'll run them myself.”
   - *Sort them:* “Below is a plain list of service names only, with no passwords or usernames. Sort them into: money, identity and government, email and phone, cloud files and photos, work and projects, social, shopping, and probably unused. For each important one, say what it could reset elsewhere and whether I should close it or protect it. I'll verify everything on the real service.”
@@ -676,14 +676,17 @@ Look for things an intruder, or an old tool, may have left behind.
 
 Make sure an attacker who takes over your everyday account cannot also delete your backups.
 
-- [ ] **6.4.1 — Check that your backup is separated from everyday credentials.** Not continuously mounted or synced, or protected by retention the everyday account cannot override.
+- [ ] **6.4.1 — Check that each backup job from section 3.4 is still kept apart, as in 1.5.2.** Not continuously mounted or synced, or protected by retention the everyday account cannot override.
 - [ ] **6.4.2 — Verify what your everyday account is allowed to delete in the backup.** By looking at permissions, not by deleting anything.
+- [ ] **6.4.3 — Check whether the everyday account could take over the backup's administration.** For example through the same password vault, a password reset sent to the same mailbox, or the same single sign-on (SSO) login.
+- [ ] **6.4.4 — Check whether the everyday account could shorten or bypass retention.** Look at who may change retention, version history, or deletion-protection settings.
+- [ ] **6.4.5 — For an offline copy, check what survives while the next backup runs.** While the drive is connected it is exposed; keep a second copy, such as a rotated drive, that stays disconnected during that time.
 
-- **Why:** Ransomware and account takeover often go after backups first. A backup the attacker can reach is not a recovery route.
-- **Tools and examples:** A disconnected drive, a backup service with separate credentials, or storage with deletion-resistant retention. Check where the backup's administration credentials are kept.
+- **Why:** Section 1.5 explains why a copy is kept apart; this section checks that it holds against a deliberate attacker. Ransomware and account takeover often go after backups first. A backup the attacker can reach directly, or through an administration route the everyday account controls, is not a recovery route.
+- **Tools and examples:** A disconnected drive, a backup service with separate credentials, or storage with deletion-resistant retention. Check where the backup's administration credentials are kept and how they are reset: if the reset goes to the everyday mailbox or the login lives in the everyday vault, a takeover of one reaches the other. Two drives used in turn leave one copy offline while the other is being written.
 - **AI help:** Ask an assistant to explain terms such as “immutable” or “append-only”, or to review your setup in general terms. It cannot see your permissions.
 - **Good result:** You know exactly how a compromised everyday account could and could not touch your backups.
-- **Check:** From the everyday account, look at the backup's permissions and confirm deletion is blocked or recoverable. Never test by attempting a destructive change.
+- **Check:** From the everyday account, look at the backup's permissions and confirm deletion, administration, and retention changes are blocked or recoverable. Confirm that at least one usable copy stays out of reach during each backup run. Never test by attempting a destructive change or a real password reset.
 - **If skipped:** One takeover can remove both the data and its backups.
 
 #### 6.5 Think through and rehearse compromise and data-loss plans
@@ -778,7 +781,7 @@ Give a tool its own narrow, removable access instead of your own keys.
 - [ ] **7.4.9 — Set a review date for each tool's access.** Put a recurring reminder to ask whether each tool still needs its access.
 
 - **Why:** An agent that reads untrusted content can be steered by it, and a key pasted into a transcript or file is copied somewhere you may not control. A narrow, separate, revocable identity limits the damage.
-- **Tools and examples:** Separate service accounts or roles, a password-manager or secrets tool with command-line access, short-lived certificates or tokens, and the approval prompts of your tool. The inventory companion has a line for each tool's identity.
+- **Tools and examples:** Separate service accounts or roles, a password-manager or secrets tool with command-line access, short-lived certificates or tokens, and the approval prompts of your tool.
 - **AI help:** Ask an assistant to explain how to set up a limited identity on your platform in general terms. Never paste the credential itself.
 - **Good result:** Each tool has a named identity, minimal rights, a log, and a tested way to cut it off.
 - **Check:** Remove the tool's access on a test basis and confirm your own access and backups are untouched. Confirm no credential appears in chats, prompts, or project files.
@@ -876,7 +879,7 @@ The Recovery Point Objective (RPO) is how much recent data loss you can tolerate
 A copy somewhere else, that a single event or a single account cannot erase.
 
 - [ ] **9.2.1 — Choose an off-site location with different failure risks.** Another building, city, or provider.
-- [ ] **9.2.2 — Choose disconnected or immutable storage.** Protected from alteration or deletion during retention.
+- [ ] **9.2.2 — Choose disconnected or immutable storage.** The separation checked in section 6.4, applied to the off-site copy: protected from alteration or deletion during retention.
 - [ ] **9.2.3 — Plan how you will reach or transport it.** Decide how you will get to it or bring it back, for example by car or a download.
 - [ ] **9.2.4 — Create the off-site recovery copy.** Run the first full backup to the chosen location.
 - [ ] **9.2.5 — Store its recovery keys somewhere independently recoverable.** For example, a sealed offline record.
@@ -1235,6 +1238,103 @@ Decide who could reach the assets if you cannot, without giving them the assets 
 - **Check:** Read the instructions as if you were the other person. They should explain what exists and where, and nothing in them should open the assets on its own.
 - **If skipped:** The assets may be unreachable for your family, or reachable by the wrong person, because nothing was decided.
 
+### Module B — AI agents, skills, and connections (optional)
+
+For readers who use AI agents that can act, not only answer: run commands, edit files, browse, send messages, or connect to their accounts. An agent follows instructions in whatever it reads, so a web page, email, document, or add-on from a provider you do not trust can steer it. Do Levels 0–3 first. Section 7.4 gives each tool its own limited, removable identity and credentials; this module adds what is specific to agents and their add-ons.
+
+Three kinds of add-on appear here:
+- **Skill:** a packaged set of instructions, sometimes with scripts, that an agent loads for a task.
+- **Model Context Protocol (MCP) server:** a connector that gives an agent new tools and data, such as access to your calendar or a database.
+- **Plugin:** an add-on that extends the agent's app.
+
+Know what each control covers. A sandbox, a container, or a separate user account with its own folder permissions limits what the agent can reach on your computer. None of them limits what leaves it: the agent's provider, and every hosted connector, receives whatever the agent sends and whatever its granted access lets it read. Share real data only with providers you trust, and test a provider you do not yet trust with invented data. If you take this module straight after Level 3, do steps 7.4.1–7.4.5 for any agent before you give it access.
+
+Investment: a few sessions; no purchases; comfort with your agent's settings. A sandbox can be a separate user account on your computer, a container, or a virtual machine.
+
+#### B.1 Know what your agents can reach
+
+A short list of your agents, their add-ons, and what each can read and do.
+
+- [ ] **B.1.1 — Note each AI agent you use and where it runs.** For example a chat app, a desktop app, a command-line tool, or a browser extension.
+- [ ] **B.1.2 — Note each skill, MCP server, plugin, or connector added to it, and who provides it.** Include ones that came built in or were added by a team.
+- [ ] **B.1.3 — Mark which of them can act, not only read.** Acting means writing, sending, deleting, paying, or running commands.
+- [ ] **B.1.4 — Mark which of them read content from outside, such as web pages, email, or shared documents.** That content can carry instructions written by strangers.
+
+- **Why:** The risky combination is an agent that reads outside content, can see your private data, and can act or send data out. You cannot limit that combination until you can see it.
+- **Tools and examples:** The agent's settings pages for connectors, extensions, skills, and permissions. One line per agent and per add-on is enough: name, provider, reads, acts, outside content (yes or no). Section 7.4.1's tool note can hold it.
+- **AI help:** Ask the agent to list its own installed tools and connectors, then compare with its settings page: the agent may not report everything. Never ask it to show tokens or keys.
+- **Good result:** A list where every agent and add-on has a provider and a mark for reading outside content and for acting.
+- **Check:** Open each agent's settings and confirm that nothing installed is missing from your list.
+- **If skipped:** An add-on you forgot about keeps its access, and you cannot judge what an injected instruction could reach.
+
+#### B.2 Put guardrails around the agent
+
+Make risky actions ask first, and keep the agent inside a space you chose.
+
+- [ ] **B.2.1 — Keep approval prompts on for actions that change, send, delete, or spend.** Leave “always allow” and automatic approval off for these, even when it is slower.
+- [ ] **B.2.2 — Run agents that execute code or commands in a sandbox.** Use the agent's own sandbox mode, a separate user account, a container, or a virtual machine.
+- [ ] **B.2.3 — Limit the agent to the folders it needs.** One project folder, not your whole home folder; keep the password vault, key folders, and backup drives out of reach.
+- [ ] **B.2.4 — Remove live secrets from the folders the agent can read.** Move keys and tokens out of project files, and supply them through a broker as in 7.4.4.
+- [ ] **B.2.5 — Turn on an activity log of the agent's actions.** Prefer one that records the action, destination, time, and outcome; before keeping full transcripts, check where they are stored, who can see them, and how long they are kept.
+- [ ] **B.2.6 — Find how to stop a running agent and cancel its background or scheduled tasks.** Try stopping a harmless run once.
+
+- **Why:** An agent that is steered, or simply wrong, acts with the permissions you gave it. Approval prompts, a sandbox, and a narrow folder limit what one bad step can do, and the log shows what happened.
+- **Tools and examples:** Permission or approval settings, sandbox or “restricted” modes, allow-lists of commands, and workspace or folder settings in your agent. A separate user account on your computer is a simple sandbox when nothing else is offered, provided its folder permissions stop it reading your own folders. An agent with access to a backup drive can damage your way back, so keep it out (see 6.4). A full transcript can hold sensitive input and tool output, so keep secrets out of it and keep private content only as long as you need it.
+- **AI help:** Ask the agent to explain its own permission modes and what each allows, then confirm them on the provider's official documentation.
+- **Good result:** Risky actions ask first, the agent works inside a limited space with no live secrets, its actions are logged, and you know how to stop it.
+- **Check:** Create a test folder outside the agent's allowed space with an invented file in it. Ask the agent to read that file and confirm it is blocked or asks first. If you test a write, use a disposable file you created for the test. Confirm the log shows the attempt.
+- **If skipped:** One misread instruction can delete files, send data, or spend money with your full rights.
+
+#### B.3 Vet skills, MCP servers, and plugins before you add them
+
+Check an add-on before it gets access, especially from a provider you do not know.
+
+- [ ] **B.3.1 — Check who publishes the add-on.** Prefer the service's own official connector or a well-known publisher; look at the repository, its history, and how widely it is used.
+- [ ] **B.3.2 — Read what access it asks for before installing.** Scopes, tokens, file and network access, and whether it can act or only read.
+- [ ] **B.3.3 — Read its instructions and tool descriptions for anything unexpected.** Skills and tool descriptions are text the agent obeys; look for requests to send data, read unrelated files, or ignore your settings.
+- [ ] **B.3.4 — Try it first in the sandbox with invented data or a test account.** Watch what it reads, writes, and sends; give it real data only once you trust the provider.
+- [ ] **B.3.5 — Connect it with its own limited credentials.** Read-only where possible, as in 7.4.2–7.4.3; never your main account's password or a full-access token.
+- [ ] **B.3.6 — Install a fixed version where you can, and review its permissions after each update.** Where versions cannot be fixed, check the permissions and changes after updates instead; do not delay security updates.
+- [ ] **B.3.7 — Add it to your list from B.1 with a review date.** Remove add-ons you no longer use.
+
+- **Why:** An add-on runs with the agent's access, and an update can change what it does after you checked it. A malicious or careless one can read your files, leak data, or quietly instruct the agent.
+- **Tools and examples:** The add-on's official page or repository, its listed permissions, and the agent's own add-on or connector settings. An add-on that asks for far more access than its job needs is a warning sign. Local add-ons that run code on your computer deserve the same caution as any downloaded program.
+- **AI help:** Paste an add-on's public description or instructions, not your credentials, and ask what access it implies and what looks unusual. Treat the answer as a second opinion; you decide.
+- **Good result:** Every add-on has a known publisher, access that fits its job, its own limited credentials, a fixed or reviewed version, and a review date.
+- **Check:** For one add-on, confirm from the service's own security page that its credential has only the expected access, and that the installed version is the one you reviewed.
+- **If skipped:** A single untrusted add-on can see everything the agent sees and act on it.
+
+#### B.4 Treat what the agent reads as untrusted
+
+Keep instructions hidden in pages, emails, documents, and tool results from turning into actions.
+
+- [ ] **B.4.1 — Use a session without acting or sending tools when the agent reads outside content.** For example, a read-only mode, or a separate agent with no access to email sending, payments, or file changes.
+- [ ] **B.4.2 — Require approval before the agent sends anything out.** Email, messages, web requests, posts, uploads, and writes to shared documents or tickets, especially in sessions that also see your private data.
+- [ ] **B.4.3 — Run a harmless injection test.** Give the agent a test page or document with a hidden, harmless instruction, such as adding the word “pineapple” to its answer, and see whether it obeys, flags it, or asks.
+- [ ] **B.4.4 — Review the log after the first few sessions that read outside content.** Look for actions or messages you did not ask for.
+
+- **Why:** This is called prompt injection: text written for the agent hides inside content it reads. Agents cannot reliably tell your instructions from a stranger's, so the protection is to limit what a steered agent can do.
+- **Tools and examples:** The agent's read-only or “ask” modes, per-tool approval settings, and separate profiles or projects. The Open Worldwide Application Security Project (OWASP) lists prompt injection first among risks for AI applications, and its prevention guidance recommends minimal permissions, human approval for consequential actions, and monitoring. A read-only connection still passes what it reads to the agent's provider. Use only invented content in the test, never real data.
+- **AI help:** Ask the agent to explain which of its tools can send data out and how to require approval for each, then confirm in its settings.
+- **Good result:** Reading outside content and acting or sending are separated or gated by your approval, and you have seen how your agent reacts to an injected instruction.
+- **Check:** Note the injected-word result as one response of one model: it shows how the agent reacted once, not that it is protected. Separately, test what the host enforces. In a read-only session, ask for a disallowed action and confirm it is blocked. In an approval-gated session, confirm the prompt shows the destination and scope, deny it, and confirm nothing was sent or changed.
+- **If skipped:** A web page or email can make the agent leak your data or act in your name.
+
+#### B.5 Know what to do if an agent or add-on misbehaves
+
+A short plan to stop it, cut its access, and check the damage.
+
+- [ ] **B.5.1 — Sketch the first steps for a misbehaving agent.** Stop it, disconnect the add-on, revoke its credentials, read the log, then check what changed.
+- [ ] **B.5.2 — Save the page where each connected service lets you revoke the agent's access.** Keep the addresses where you can reach them from another device.
+- [ ] **B.5.3 — Add agents and add-ons to your quarterly review.** Check the B.1 list, unused add-ons, and review dates.
+
+- **Why:** When an agent does something unexpected, minutes matter, just as in section 0.2. Knowing where to cut access avoids searching under pressure.
+- **Tools and examples:** The revocation pages of your accounts (connected apps, tokens, sessions), the agent's own stop and disconnect controls, and your backups for restoring changed files. Follow sections 0.2 and 6.5 if money, accounts, or data are affected. Restore into a separate place first, never over live data.
+- **AI help:** Ask an assistant to turn your notes into a one-page checklist. Do not use the affected agent to investigate itself.
+- **Good result:** A short plan, revocation pages within reach, and a recurring check in the quarterly review.
+- **Check:** For one add-on, find its revocation page from another device without using the agent. Do not revoke anything you still need.
+- **If skipped:** A compromised agent keeps working while you look for the off switch.
+
 ### Everyday habits — ongoing
 
 - Verify unexpected requests through a separate known channel.
@@ -1249,6 +1349,7 @@ Decide who could reach the assets if you cannot, without giving them the assets 
 - Check security and backup alerts promptly.
 - Perform scheduled manual checks.
 - Use the right browser profile for the task.
+- Read what an AI agent is about to do before approving it.
 - Do the quarterly review when the calendar event appears.
 
 ## Appendix — practical worksheet examples
@@ -1268,7 +1369,7 @@ Prioritize by impact and dependencies; use the priorities to order protection, b
 ### Backup coverage
 | Data/location | Backup copy and isolation | Frequency/retention | Restore test | Omission or dependency |
 |---|---|---|---|---|
-| Documents folder | External drive, disconnected after each copy | Monthly; last three copies kept | One file restored in March | Cloud-only files downloaded first |
+| Documents folder | External drive, disconnected after each copy | Monthly; last three copies kept | 2026-03-12 · Sample document restored to a new folder · Opened; expected version · Next test after the April refresh | Cloud-only files downloaded first |
 | Photos | Cloud photos plus drive copy | Monthly; one year of versions | Not tested | Phone photos not yet in the drive copy |
 | Email | Provider mailbox only | None | Not tested | Gap: no separate export |
 | | | | | |
