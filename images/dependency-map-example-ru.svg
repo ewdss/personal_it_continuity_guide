@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" font-family="Segoe UI, Arial, sans-serif" font-size="11">
+  <defs>
+    <marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#52636C"/></marker>
+  </defs>
+  <rect width="920" height="430" fill="#ffffff"/>
+  <g fill="#52636C" font-weight="600" font-size="10.5">
+    <text x="10" y="20">ДЕЙСТВИЕ</text><text x="164" y="20">АККАУНТ</text><text x="318" y="20">УСТРОЙСТВО</text>
+    <text x="472" y="20">ВТОРОЙ ФАКТОР</text><text x="626" y="13">МАРШРУТ</text><text x="626" y="26">ВОССТАНОВЛЕНИЯ</text><text x="780" y="20">ДАННЫЕ / КОПИЯ</text>
+  </g>
+  <g stroke="#52636C" stroke-width="1.4" marker-end="url(#a)" fill="none">
+    <path d="M138 66H162"/><path d="M292 66H316"/><path d="M446 66H470"/><path d="M600 66H624"/><path d="M754 66H778"/>
+    <path d="M138 146H162"/><path d="M292 146H316"/><path d="M446 146H470"/><path d="M600 146H624"/><path d="M754 146H778"/>
+    <path d="M138 226H162"/><path d="M292 226H316"/><path d="M446 226H470"/><path d="M600 226H624"/><path d="M754 226H778"/>
+  </g>
+  <g fill="#E7EFF2" stroke="#146C75" stroke-width="1.3">
+    <rect x="10" y="40" width="128" height="52" rx="6"/><rect x="164" y="40" width="128" height="52" rx="6"/>
+    <rect x="780" y="40" width="128" height="52" rx="6"/>
+    <rect x="10" y="120" width="128" height="52" rx="6"/><rect x="164" y="120" width="128" height="52" rx="6"/>
+    <rect x="318" y="120" width="128" height="52" rx="6"/><rect x="780" y="120" width="128" height="52" rx="6"/>
+    <rect x="10" y="200" width="128" height="52" rx="6"/><rect x="164" y="200" width="128" height="52" rx="6"/>
+    <rect x="318" y="200" width="128" height="52" rx="6"/><rect x="472" y="200" width="128" height="52" rx="6"/>
+    <rect x="780" y="200" width="128" height="52" rx="6"/>
+  </g>
+  <g fill="#FDE8E4" stroke="#C0392B" stroke-width="1.6">
+    <rect x="318" y="40" width="128" height="52" rx="6"/><rect x="472" y="40" width="128" height="52" rx="6"/>
+    <rect x="626" y="40" width="128" height="52" rx="6"/>
+    <rect x="472" y="120" width="128" height="52" rx="6"/><rect x="626" y="120" width="128" height="52" rx="6"/>
+    <rect x="626" y="200" width="128" height="52" rx="6"/>
+  </g>
+  <g fill="#19394B" text-anchor="middle">
+    <text x="74" y="66">Оплата счетов</text>
+    <text x="228" y="58">Банковский</text><text x="228" y="74">аккаунт</text>
+    <text x="382" y="58">Основной</text><text x="382" y="74">телефон</text>
+    <text x="536" y="58">Аутентификатор</text><text x="536" y="74">на телефоне</text>
+    <text x="690" y="58">SMS на номер</text><text x="690" y="74">телефона</text>
+    <text x="844" y="58">Данные</text><text x="844" y="74">хранятся в банке</text>
+
+    <text x="74" y="138">Работа над</text><text x="74" y="154">проектом A</text>
+    <text x="228" y="138">Аккаунт</text><text x="228" y="154">хостинга</text>
+    <text x="382" y="146">Ноутбук</text>
+    <text x="536" y="138">Аутентификатор</text><text x="536" y="154">на телефоне</text>
+    <text x="690" y="130">Основная почта,</text><text x="690" y="146">сброс по SMS на</text><text x="690" y="162">номер</text>
+    <text x="844" y="138">Файлы на ноутбуке</text><text x="844" y="154">и диске</text>
+
+    <text x="74" y="218">Просмотр</text><text x="74" y="234">семейных фото</text>
+    <text x="228" y="218">Аккаунт</text><text x="228" y="234">фотохранилища</text>
+    <text x="382" y="226">Ноутбук</text>
+    <text x="536" y="226">Только пароль</text>
+    <text x="690" y="210">Основная почта,</text><text x="690" y="226">сброс по SMS на</text><text x="690" y="242">номер</text>
+    <text x="844" y="218">Фото на ноутбуке</text><text x="844" y="234">и копия на диске</text>
+  </g>
+  <rect x="10" y="276" width="898" height="130" rx="8" fill="#F4F7F8" stroke="#D7E0E3"/>
+  <rect x="22" y="290" width="16" height="12" rx="3" fill="#FDE8E4" stroke="#C0392B" stroke-width="1.6"/>
+  <text x="46" y="300" fill="#19394B">Красные рамки отмечают шаги, которые зависят от основного телефона или его номера.</text>
+  <g fill="#19394B">
+    <text x="22" y="324" font-weight="600">Что показывает карта</text>
+    <text x="22" y="342">Потеря телефона или номера затронет все три цепочки: вход в банк, подтверждение входа на хостинг и</text>
+    <text x="22" y="358">восстановление почты, от которой зависят хостинг и фото. Эту общую зависимость стоит устранить первой.</text>
+    <text x="22" y="376">Помогут коды на аварийной карточке, второе доверенное устройство с открытым сеансом</text>
+    <text x="22" y="392">и PIN-код аккаунта оператора.</text>
+  </g>
+</svg>
