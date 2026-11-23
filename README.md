@@ -36,4 +36,4 @@ To work through this guide over several months with your own AI assistant or age
 
 ## License
 
-Licensed under the [Apache License, Version 2.0](LICENSE).
+Licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE).
