@@ -1,4 +1,4 @@
-# Personal IT security and recovery guidance
+# Personal security and recovery guidance
 
 A practical, step-by-step guide for advanced everyday users who manage several devices, online accounts, and projects, including for work. It helps you protect what matters, keep a way back when something goes wrong, and keep your protection consistent instead of sporadic. No specialist security knowledge is needed.
 
@@ -19,13 +19,14 @@ It reduces risk; it does not remove it. It is about you and your personal setup,
 
 ## Formats and languages
 
-The English text is the source of truth. The Russian translation is a snapshot: it carries the revision it was translated from and may lag behind the English text.
+The English text is the source of truth. Each translation is a snapshot: it carries the revision it was translated from and may lag behind the English text.
 
 | Language | PDF | Markdown |
 |---|---|---|
 | English | [personal guidance.pdf](personal%20guidance.pdf?raw=true) | [personal guidance.md](personal%20guidance.md) |
 | Russian | [personal guidance-ru.pdf](personal%20guidance-ru.pdf?raw=true) | [personal guidance-ru.md](personal%20guidance-ru.md) |
 | Spanish | [personal guidance-es.pdf](personal%20guidance-es.pdf?raw=true) | [personal guidance-es.md](personal%20guidance-es.md) |
+| Chinese (Simplified) | [personal guidance-zh.pdf](personal%20guidance-zh.pdf?raw=true) | [personal guidance-zh.md](personal%20guidance-zh.md) |
 
 PDFs are for reading and printing; all images are inside the file. Markdown is for reading on GitHub, copying, or processing; images are linked from the [images](images) folder next to it, so keep the folder together with the file.
 
