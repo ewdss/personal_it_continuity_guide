@@ -1,4 +1,4 @@
-# Personal security and recovery guidance
+# Personal IT continuity, security and recovery guidance
 
 A practical, step-by-step guide for advanced everyday users who manage several devices, online accounts, and projects, including for work. It helps you protect what matters, keep a way back when something goes wrong, and keep your protection consistent instead of sporadic. No specialist security knowledge is needed.
 
