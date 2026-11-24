@@ -25,6 +25,7 @@ The English text is the source of truth. The Russian translation is a snapshot: 
 |---|---|---|
 | English | [personal guidance.pdf](personal%20guidance.pdf) | [personal guidance.md](personal%20guidance.md) |
 | Russian | [personal guidance-ru.pdf](personal%20guidance-ru.pdf) | [personal guidance-ru.md](personal%20guidance-ru.md) |
+| Spanish | [personal guidance-es.pdf](personal%20guidance-es.pdf) | [personal guidance-es.md](personal%20guidance-es.md) |
 
 PDFs are for reading and printing; all images are inside the file. Markdown is for reading on GitHub, copying, or processing; images are linked from the [images](images) folder next to it, so keep the folder together with the file.
 
